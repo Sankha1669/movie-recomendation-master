@@ -1,0 +1,169 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(31, 41, 55);
+}
+
+.nav {
+  background-color: rgb(68, 67, 67);
+}
+
+.nav-menu {
+  background-color: rgb(68, 67, 67);
+}
+
+.nav-menu a {
+  color: #fff;
+}
+
+.nav-menu button {
+  color: #fff;
+}
+.search {
+  width: 250px;
+}
+#navbar-dropdown {
+  padding-left: 8%;
+}
+
+svg {
+  padding-top: 5px;
+}
+
+.drop-menu {
+  background-color: rgb(68, 67, 67);
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+.most-picks {
+  padding: 80px 0 0 0;
+  text-align: center;
+  font-size: 35px;
+}
+
+.movie-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Initially hide the movie cards */
+  transform: translateY(50px); /* Move the cards down initially */
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.movie-row {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.movie-card {
+  width: 200px;
+  height: 300px;
+  margin: 0 10px;
+  background-color: #ddd;
+  border-radius: 8px;
+  opacity: 1; /* Ensure cards are visible at all times */
+  transform: none; /* Reset the transform after animation */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition-delay: 0.4s;
+}
+.movie-card:hover {
+  transform: scale(1.08) translateZ(20px) !important;
+}
+
+/* Animation for cards appearing from both sides */
+.from-sides .movie-card {
+  transform: translateX(0); /* Reset transform initially */
+}
+
+/* Animation for cards appearing from corners */
+.from-corners .movie-card {
+  transform: translate(0); /* Reset transform initially */
+}
+
+.animate .movie-card-section {
+  opacity: 1; /* Show the movie cards */
+  transform: translateY(0); /* Move the cards up on scroll */
+}
+
+.movie-poster {
+  width: 200px;
+  height: 300px;
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0 !important;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))) !important;
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse)) !important;
+}
+
+.divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1 !important;
+  border-color: rgb(243 244 246 / var(--tw-divide-opacity)) !important;
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
+}
+
+/* scrollbutton */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-to-top.visible {
+  display: flex;
+}
+
+#search-navbar::placeholder {
+  color: rgb(216, 216, 216);
+}
+
+.movie-card1 {
+  margin: 0 !important;
+  display: grid;
+}
+
+.movie-card-section1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0 35px;
+  padding-bottom: 60px;
+  row-gap: 3.5rem;
+}
+
+.movie-card1:hover {
+  transform: scale(1.08) translateZ(20px) !important;
+  transition-duration: 0.3s;
+}
+
+.heading .most-picks {
+  padding-bottom: 70px;
+}
